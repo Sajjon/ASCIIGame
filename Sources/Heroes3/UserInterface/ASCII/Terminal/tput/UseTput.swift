@@ -13,3 +13,12 @@ func tput(command tputCommand: Tput) throws -> String {
         to: [tputCommand.command]
     )
 }
+
+// MARK: Common
+func clearScreen() {
+    do {
+        _ = try tput(command: .clearScreen)
+    } catch {
+        fatalError("Failed to clear screen, error: \(error)")
+    }
+}

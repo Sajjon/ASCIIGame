@@ -6,9 +6,9 @@
 //
 
 import Foundation
-
-/// From SO: https://stackoverflow.com/a/47777085/1311272
 import Darwin
+
+// From SO: https://stackoverflow.com/a/47777085/1311272
 func getTerminalSize() -> (width: UInt16, height: UInt16) {
     var w = winsize()
     guard ioctl(STDOUT_FILENO, TIOCGWINSZ, &w) == 0 else {
