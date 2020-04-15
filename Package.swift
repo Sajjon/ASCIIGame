@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "Heroes3",
+    platforms: [
+        .macOS(.v10_15),
+        .iOS(.v13)
+    ],
     dependencies: [
          .package(url: "https://github.com/JohnSundell/ShellOut", from: "2.3.0"),
     ],
